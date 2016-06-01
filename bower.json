@@ -1,0 +1,24 @@
+{
+  "name": "cri-packages",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Randolf Sartagoda"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "font-awesome": "^4.6.3",
+    "wow": "wow.js#^1.1.2",
+    "animate.css": "^3.5.1"
+  }
+}
