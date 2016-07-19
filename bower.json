@@ -19,6 +19,7 @@
     "bootstrap-sass": "^3.3.6",
     "font-awesome": "^4.6.3",
     "wow": "wow.js#^1.1.2",
-    "animate.css": "^3.5.1"
+    "animate.css": "^3.5.1",
+    "jquery": "2.2.4"
   }
 }
