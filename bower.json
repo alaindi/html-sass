@@ -3,7 +3,7 @@
   "description": "",
   "main": "",
   "authors": [
-    "Randolf Sartagoda"
+    "JudeDingal"
   ],
   "license": "MIT",
   "homepage": "",
@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "v4.0.0-alpha.4",
+    "bootstrap-sass": "^3.3.6",
     "font-awesome": "^4.6.3",
     "wow": "wow.js#^1.1.2",
     "animate.css": "^3.5.1",
