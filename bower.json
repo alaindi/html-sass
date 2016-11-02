@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "^3.3.6",
+    "bootstrap-sass": "^3.3.5",
     "font-awesome": "^4.6.3",
     "wow": "wow.js#^1.1.2",
     "animate.css": "^3.5.1",
