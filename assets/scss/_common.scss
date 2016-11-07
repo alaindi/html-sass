@@ -1,3 +1,71 @@
+/* global */
+img{
+    max-width: 100%;
+}
+/* END global */
+
+/* navbar */
+
+    .nav-area{
+        background: rgba(255,255,255,.9);
+    }   
+
+.nav-area.sticky, .blog .nav-area,
+    .single .nav-area, .archive .nav-area {
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        z-index:999999;
+        
+    }
+#navbar{
+    font-family: $lora;
+    font-size: 16px;
+    img{
+        float: left;
+    }
+
+    ul{
+        float: right;
+
+        @media (max-width: $screen-xs-max){
+            width: 100%;
+            background: rgba(255,255,255,.4);
+        }
+        li{
+            text-transform: uppercase;
+            padding: 9px;
+            @media (max-width: $screen-xs-max){
+                border-bottom: 1px solid rgb(169, 165, 165);
+            }
+            a{
+                 &:hover{
+                    background: none;
+                    color: $pink;
+                }
+                @media (max-width: $screen-xs-max){
+                    color: $pink;
+                    background: $white;
+                    width: 110px;
+                }  
+            }          
+        }
+        li.active{
+            a{
+                color: $pink;
+                &:hover{
+                    background: none;
+                }
+            }        
+        }
+    }
+}
+.navbar-toggle .icon-bar{
+    background: $black;
+}
+/* end navbar */
+
 
 /* =WordPress Core
 -------------------------------------------------------------- */
