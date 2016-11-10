@@ -3,9 +3,18 @@ img{
     max-width: 100%;
 }
 
-
 .referenceCSS { padding-left: 30px; text-indent: -30px; }
 .blog-detail iframe { display: block; text-align: center; margin: 0 auto; }
+
+.nav-area.sticky, .blog .nav-area,
+.single .nav-area, .archive .nav-area {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999999;
+    
+}
 
 /* END global */
 
