@@ -1,0 +1,263 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="bower_components/wow/dist/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</head>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $('.btn-blue').hover(function(){
+          $(this).parent('.blog-col').toggleClass('div-hover');
+        });    
+         
+         $(window).scroll(function() {
+         if ($(this).scrollTop() > 642) {  
+             $('.nav-area').addClass("sticky");
+            
+           }
+           else{
+             $('.nav-area').removeClass("sticky");
+             
+           }
+           if ($(this).scrollTop() > 1){  
+             $('.content-area').addClass('scrolled');
+           }
+           else{
+             $('.content-area').removeClass('scrolled');
+           }
+         });
+
+       
+    });
+    $(document).ready(function() {
+         var sections = $('section'), nav = $('nav'), nav_height = nav.outerHeight();
+          console.log(nav_height);
+        $(window).on('scroll', function () {
+          var cur_pos = $(this).scrollTop();
+          sections.each(function() {
+            var top = $(this).offset().top - nav_height,
+                bottom = top + $(this).outerHeight();
+            
+            if (cur_pos >= top && cur_pos <= bottom) {
+              nav.find('a').parent('li').removeClass('active');
+              sections.parent('li').removeClass('active');
+              $(this).parent('li').addClass('active');
+              nav.find('a[href="#'+$(this).attr('id')+'"]').parent('li').addClass('active');
+            }
+          });
+        });
+        if( jQuery("#home-blog").length > 0 ){
+          nav.find('a').on('click', function () {
+            var $el = $(this), id = $el.attr('href');
+            $('html, body').animate({
+              scrollTop: $(id).offset().top - (nav_height-1)
+            }, 500);
+            return false;
+          });
+        }
+
+        
+      });
+/* REDIRECT TO PAGE WHEN FROM BLOG PAGES */
+  if( document.location.pathname.indexOf("blog") > 0 || window.location.pathname.split("/").length > 3){
+     jQuery("#menu-menu-1 li a,.nav-area li a").each(function(){
+         if( jQuery(this).html() !=="blog"){
+              var pathname= jQuery(this).html().toLowerCase();
+              var hash="";
+              if(pathname ==="book"){
+                 hash="#about-book";
+              }else if(pathname ==="author"){ 
+                 hash="#about-author";
+              }else if(pathname ==="order"){
+                 hash="#order";
+               }else if(pathname ==="contact"){
+                 hash="#footer";
+               }
+              jQuery(this).click(function(){
+                  window.location.href="/DorisLafrenz/"+hash; 
+              });
+         }
+     });
+
+  }
+  /* END REDIRECT TO PAGE WHEN FROM BLOG PAGES */
+
+  /* FIX ALIGNMENT FOR AUTHOR & CONTACT LINK */
+  jQuery(document).ready(function(){
+      if( window.location.hash === "#about-author" || window.location.hash === "#footer"){
+          jQuery("#menu-main-menu li a,.nav-area li a").each(function(){     
+              var pathname= jQuery(this).html().toLowerCase();
+              var link = jQuery(this);
+              if( (pathname ==="author" && window.location.hash === "#about-author") 
+                || (pathname ==="contact" && window.location.hash === "#footer") ){
+                link.click(); 
+              }           
+         });
+      }
+  });
+  /* END FIX ALIGNMENT FOR AUTHOR & CONTACT LINK */
+</script>
+<body class="blog">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->  
+    <section class="nav-area">
+        <div class="container">
+            <nav class="navbar">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <img src="assets/images/logo.png" alt="">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class=""><a href="book.html">Book</a></li>
+                    <li class=""><a href="author.html">Author</a></li>
+                    <li class=""><a href="order.html">Order</a></li>
+                    <li class=""><a href="blog.html">Blog</a></li>
+                    <li class=""><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            </nav>
+        </div>
+    </section>
+    <section id="blog">
+        <div class="container">
+            <h4>Blog</h4>
+            <div class="row">
+                <div class="col-md-8 col-sm-7">
+                    <div class="blogpost-mainwrap wow slideInLeft">
+                        <div class="blogpost-row clearfix">
+
+                            <div class="img-cont">
+                                <img src="assets/images/blog-img01.png" alt="" />
+                            </div>
+                            <div class="blog-text">
+                               <h3 class="title">Blog Title Here</h3>
+                                <p>
+                                    This is for your viewing only. The media and text posted on this page are not the actual materials for the website. This is for your viewing only. The media and text posted on this page are not the actual materials for the website. <a target="_blank" href="">Continue Reading</a>                                
+                                </p>
+                                <div class="author-date">
+                                    <span class="author">Unknown User</span>
+                                    <span class="date">30 March 2016</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blogpost-row clearfix">
+                            <div class="img-cont">
+                                <img src="assets/images/blog-img02.png" alt="" />
+                            </div>
+                            <div class="blog-text">
+                               <h3 class="title">Blog Title Here</h3>
+                                <p>
+                                    This is for your viewing only. The media and text posted on this page are not the actual materials for the website. This is for your viewing only. The media and text posted on this page are not the actual materials for the website. <a target="_blank" href="">Continue Reading</a>                                    
+                                </p>
+                                <div class="author-date">
+                                    <span class="author">Unknown User</span>
+                                    <span class="date">30 March 2016</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blogpost-row clearfix">
+                            <div class="img-cont">
+                                <img src="assets/images/blog-img03.png" alt="" />
+                            </div>
+                            <div class="blog-text">
+                               <h3 class="title">Blog Title Here</h3>
+                                <p>
+                                    This is for your viewing only. The media and text posted on this page are not the actual materials for the website. This is for your viewing only. The media and text posted on this page are not the actual materials for the website. <a target="_blank" href="">Continue Reading</a>
+                                </p>
+                                <div class="author-date">
+                                    <span class="author">Unknown User</span>
+                                    <span class="date">30 March 2016</span>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="blog-pagination clearfix">
+                            <nav class="navigation posts-navigation" role="navigation">
+                                <h2 class="screen-reader-text">Posts navigation</h2>
+                                <div class="nav-links">
+                                    <div class="nav-previous"><a href="//localhost:3000/kemarsmith/blog/page/3/">...Older posts</a></div>
+                                    <div class="nav-next"><a href="//localhost:3000/kemarsmith/blog/">Newer posts...</a></div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-5 wow slideInRight">
+                    <div class="blogside-wrap">
+                        <section class="widget search-2 widget_search">
+                            <div class="blog-search">
+                                <form role="search" method="get" id="searchform" action="//localhost:3000/kemarsmith/">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="s">Search for: </label>
+                                        <div class="input-group">
+                                            <input type="text" value="" placeholder="Search Here" class="form-control" name="s" id="s">
+                                            <div class="input-group-addon">
+                                                <button id="search" class="btn-orange" data-toggle="tooltip" data-placement="bottom" title="Search for an article">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </div>
+                                            <!-- <input type="submit" id="searchsubmit" value="Search" /> -->
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                        <section class="widget recent-posts-2 widget_recent_entries">
+                            <h3>Recent Posts</h3>
+                            <ul>
+                                <li><a href="">Sample Blog 1</a></li>
+                                <li><a href="">Sample Blog 2</a></li>
+                                <li><a href="">Sample Blog 3</a></li>
+                            </ul>
+                        </section>
+                        <section class="widget archives-2 widget_archive">
+                            <h3>Archives</h3>     
+                            <ul>
+                                <li><a href="">August 2016</a></li>
+                                <li><a href="">September 2016</a></li>
+                            </ul>
+                            </section>
+                        <section class="widget categories-2 widget_categories">
+                            <h3>Categories</h3>        
+                            <ul>
+                                <li><a href="">Uncategorized</a></li>
+                            </ul>
+                        </section> 
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="col-md-12 col-sm-12">
+            <div class="footer-wrapper">
+                <div class="copyright">
+                    <p><span>Copyright &copy;</span> Nancy Hale. Website by <a href="#" target="_blank"> LitFire Publishing</a>: Achieve Your Publishing Success.</p>
+                </div>
+            </div>          
+        </div>
+    </footer>
+</body>
+
+</html>
