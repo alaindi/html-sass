@@ -58,6 +58,7 @@ div.wpcf7-validation-errors {
             background: rgba(255,255,255,.4);
         }
         li{
+	    display: inline-block;
             text-transform: uppercase;
             padding: 9px;
             @media (max-width: $screen-xs-max){
