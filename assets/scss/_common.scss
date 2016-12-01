@@ -85,6 +85,9 @@ div.wpcf7-validation-errors {
                     background: none;
                     color: $pink;
                 }
+		 &:focus,&:active{
+                    background: none;
+                }
                 @media (max-width: $screen-xs-max){
                     color: $pink;
                     background: $white;
