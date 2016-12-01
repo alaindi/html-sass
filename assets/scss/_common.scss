@@ -46,9 +46,17 @@ div.wpcf7-validation-errors {
 
 /* navbar */
 
-    .nav-area{
-        background: rgba(255,255,255,.9);
-    }   
+.nav-area{
+    background: $red;
+    padding: 15px;
+    opacity: .8;
+    .navbar{
+        margin: 0;
+        img{
+            float: left;
+        }
+    }
+}    
 
 .nav-area.sticky, .blog .nav-area,
     .single .nav-area, .archive .nav-area {
