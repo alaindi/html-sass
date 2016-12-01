@@ -82,6 +82,7 @@ div.wpcf7-validation-errors {
             }	
             @media (max-width: $screen-xs-max){
                 border-bottom: 1px solid rgb(169, 165, 165);
+		width: 100%;
             }
             a{
                  &:hover{
@@ -128,9 +129,6 @@ div.wpcf7-validation-errors {
     background: $black;
 }
 
-.navbar-header{
-    float: right;
-}
 /* end navbar */
 
 
