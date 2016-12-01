@@ -77,6 +77,9 @@ div.wpcf7-validation-errors {
 	    display: inline-block;
             text-transform: uppercase;
             padding: 9px;
+	    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+              padding: 9px 0;
+            }	
             @media (max-width: $screen-xs-max){
                 border-bottom: 1px solid rgb(169, 165, 165);
             }
@@ -93,6 +96,9 @@ div.wpcf7-validation-errors {
                     background: $white;
                     width: 110px;
                 }  
+		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+                  padding: 10px;
+                }    
             }          
         }
         li.active{
