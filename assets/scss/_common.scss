@@ -20,6 +20,20 @@ img{
   }
 }
 
+.carousel-control.left, 
+.carousel-control.right{
+    background: none;
+    opacity: 1;
+    &:hover{    
+        opacity: .7;
+    }
+}
+
+.carousel-control{
+    font-size: 70px;
+    top: 43%;
+}
+
 .referenceCSS { padding-left: 30px; text-indent: -30px; }
 .blog-detail iframe { display: block; text-align: center; margin: 0 auto; }
 
