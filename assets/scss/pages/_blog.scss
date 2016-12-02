@@ -13,6 +13,28 @@
 		padding-top: 100px;
 	} 
 }
+
+#comments a, .reply, 
+.navigation a{
+	color: #474545;
+}
+
+.nav-previous {
+	&:before{
+		content: "\00ab";
+		font-size: 24px;
+   		margin-right: 5px;
+	}
+}
+
+.nav-next {
+	&:after{
+		content: "\00bb";
+		font-size: 24px;
+    	margin-left: 5px;
+	}
+}
+
 .blogpost-row {
     border-bottom: 2px solid rgba(188, 187, 187, 0.26);
     margin:50px 0 0;        
@@ -99,7 +121,7 @@
 .blog-pagination {
 	width:100%;
 	margin:25px 0 0;
-	padding:25px 0 0;
+	padding:25px 0 100px;
 	h2 {
 		display:none
 	}
