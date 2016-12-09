@@ -1,3 +1,17 @@
+.blog, .search, .archive, .category, .single{
+    li.active,
+    li.current_page_item,
+    li.current-menu-item,
+    li.current_page_parent {
+        a{
+            color: $gold !important;
+            &:focus, &:active{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
 .blog, .single, .archive, .error404, .search{
 	h3{
 		font-family: $lora;
