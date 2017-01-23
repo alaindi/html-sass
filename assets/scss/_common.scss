@@ -351,4 +351,25 @@ div.wpcf7-validation-errors {
     }
     input[type=checkbox] + span:before{ 
         content:' '; 
-        width:1
+        width:1;
+	letter-spacing: 5px; 
+    } 
+
+    .btn-style{
+        padding: 10px 29px !important;
+        /* border: 2px solid $black;*/
+        display: inline-block;
+        font-size: 16px;
+        color: #1a1a1a;
+        text-align: right;
+        float: right;
+	margin: 6px 16px;
+
+        &:hover{
+            text-decoration: underline;
+        }
+        &:active, &:focus{
+            text-decoration: none;
+        }
+    }
+}	
