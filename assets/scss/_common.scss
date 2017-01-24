@@ -39,7 +39,8 @@ img{
     top: 43%;
 }
 
-.referenceCSS { padding-left: 30px; text-indent: -30px; }
+.referenceCSS { padding-left: 30px !important; text-indent: -30px !important; font-size:13px !important;}
+.referenceCSS a { text-transform:inherit !important; }
 .blog-detail iframe { display: block; text-align: center; margin: 0 auto; }
 
 .nav-area.sticky, .blog .nav-area,
