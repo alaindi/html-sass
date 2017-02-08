@@ -25,6 +25,7 @@
         /* JS */
         new WOW().init();
         $(document).ready(function(){
+                jQuery(".single time").html("") /* remove date on blog comment */
 
                 $('.btn-blue').hover(function(){
                   $(this).parent('.blog-col').toggleClass('div-hover');
