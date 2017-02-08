@@ -314,3 +314,84 @@
 		}
 	}
 } 
+
+
+
+
+.blogpost-row {
+        h3 {
+                padding:0 0 15px;
+                font-weight:600;
+        }
+        figure.wp-caption {
+                margin-top:20px;
+                margin-bottom:20px;
+        }
+        figure.wp-caption.alignleft, figure.wp-caption.alignnone, figure.wp-caption.alignright {
+                margin-top:0;
+        }
+        ul {
+                padding:0 0 0 40px;
+                li {
+                        line-height:30px;
+                        padding:0 0 15px;
+                        color:#333;
+                        ul {
+                                padding-top:15px;
+                                li {
+                                        list-style-type:circle;
+                                        &:last-child {
+                                                padding-bottom:0;
+                                        }
+                                }
+                        }
+                }
+        }
+        ol {
+                padding:0 0 0 20px;
+                li {
+                        line-height:30px;
+                        padding:0 0 15px;
+                        color:#333;
+                        list-style-type: upper-roman;
+                }
+        }
+        ol.list-letter, ol li ol {
+                padding:0 0 0 30px;
+        }
+        ol.list-letter, ol li ol li {
+                list-style-type: lower-alpha;
+                padding-top:15px;
+                li:last-child {
+                        padding-bottom:0; 
+                }
+                ul {
+                        padding-top:15px;
+                        li:last-child {
+                                padding-bottom:0;
+                        }
+                }
+        }
+        ol.list-number, ol li ol li ol {
+                padding:0 0 0 40px;
+                li {
+                        list-style-type: decimal;
+                }
+        }
+        ol ul {
+                li {
+                        list-style-type:disc;
+                        ul {
+                                li {
+                                        list-style-type:circle;
+                                }
+                        }
+                }
+        }
+        h4 {
+                padding:0 0 15px;
+                font-weight:bold;
+        }
+}
+
+
