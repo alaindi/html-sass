@@ -68,6 +68,17 @@ div.wpcf7-validation-errors {
 
 /* END global */
 
+/* section banner */
+
+#banner{
+    background: url("../images/banner-bg.png") center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+/* END section banner */
+
 /* navbar */
 
 .nav-area{
@@ -160,6 +171,50 @@ div.wpcf7-validation-errors {
 }
 
 /* end navbar */
+
+/* section about book */
+
+#about-book{
+    background: url("../images/book-bg.png") center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+/* END section about book */
+
+/* section book reviews */
+
+#book-reviews{
+    background: url("../images/reviews-bg.png") center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+/* END section book reviews */
+
+/* section about author */
+
+#about-author{
+    background: url("../images/author-bg.png") center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+/* END section about author */
+
+/* section order */
+
+#order{
+    background: url("../images/order-bg.png") center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+/* END section order */
 
 /* Footer */ 
 #footer{
