@@ -320,7 +320,7 @@ Mailpoet Checkbox
             $status = '';
           }
            
-           echo '<div class="carousel-item item-wrapper '.$status.'"><h4>'.  $post_review->post_title  .'</h4>
+           echo '<div class="item carousel-item item-wrapper '.$status.'"><h4>'.  $post_review->post_title  .'</h4>
                 <h5>Amazon Reviewer</h5>
                 _______<br/><br/>
                 <p>'.  $post_review->post_content  .'</div>';
